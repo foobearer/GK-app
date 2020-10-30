@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="login">
+        <p class="alert" *ngIf="alertMessage !== ''"> {{ alertMessage }} </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Username:</mat-label>
+                <input matInput placeholder="Enter your username" [(ngModel)]="username">
+                <mat-icon matSuffix>assignment_ind</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Password:</mat-label>
+                <input type="password" matInput placeholder="Enter your password" [(ngModel)]="password">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+        </p>
+        <button mat-raised-button color="primary" (click)="verifyUserCredentials()">LOGIN</button>
+        <p class="subtitle">Not Registered? <a href="#">Create an account</a></p>
+    </div>
+</div>

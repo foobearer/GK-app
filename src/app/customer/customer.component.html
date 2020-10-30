@@ -1,0 +1,40 @@
+<!-- <div class="header">
+    <a class="back" routerLink="/home">
+        <mat-icon>arrow_back_ios</mat-icon>
+    </a>
+    <p>Add Customer Information</p>
+</div> -->
+<app-header [title]="title"></app-header>
+<div class="customer">
+
+    <div class="content">
+        <p class="alert-message" *ngIf="alertMessage"> {{alertMessage}} </p>
+        <form>
+            <mat-form-field appearance="outline">
+                <mat-label>Customer Name</mat-label>
+                <input matInput placeholder="Enter Customer Name" [formControl]="name" required>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Customer Age</mat-label>
+                <input type="number" matInput placeholder="Enter Customer Age" [formControl]="age" required>
+                <mat-icon matSuffix>contacts</mat-icon>
+                <mat-error *ngIf="age.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Customer Address</mat-label>
+                <input matInput placeholder="Enter Customer Address" [formControl]="address" required>
+                <mat-icon matSuffix>business</mat-icon>
+                <mat-error *ngIf="address.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <div class="actions">
+                <button mat-raised-button routerLink="/home">Cancel</button>
+                <button mat-raised-button color="primary" (click)="saveCustomerDetails()">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

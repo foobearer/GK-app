@@ -1,0 +1,45 @@
+<div class="home">
+    <div class="header">
+        <p>Welcome, {{ userDetails?.firstName }}</p>
+        <button mat-mini-fab color="primary" aria-label="logout" (click)="logout()">
+            <mat-icon>play_for_work</mat-icon>
+          </button>
+    </div>
+    <div class="container">
+        <a routerLink="/hierarchy">
+            <div class="nav-item">
+                <p>Hierarchy</p>
+            </div>
+        </a>
+        <a routerLink="/customer">
+
+            <div class="nav-item">
+                <p>Customer</p>
+            </div>
+        </a>
+        <a routerLink="/orders">
+
+            <div class="nav-item">
+                <p>Orders</p>
+            </div>
+        </a>
+        <a routerLink="">
+
+            <div class="nav-item">
+                <p>Schedules</p>
+            </div>
+        </a>
+        <a href="">
+
+            <div class="nav-item">
+                <p>Messages</p>
+            </div>
+        </a>
+        <a href="">
+
+            <div class="nav-item">
+                <p>Email</p>
+            </div>
+        </a>
+    </div>
+</div>
